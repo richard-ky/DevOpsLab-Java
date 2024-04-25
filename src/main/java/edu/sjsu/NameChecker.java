@@ -13,7 +13,7 @@ public class NameChecker {
      * @param input Name to check
      * @return True if input is a valid name, else false
      */
-    public static boolean nameCheck(String s) {
+    public static boolean check(String s) {
         // Checks that a name only includes alphabetic characters, -, or single quote
         // Names must be between 2 and 40 characters long
         // Quoted strings and -- are disallowed
