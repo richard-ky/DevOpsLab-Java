@@ -22,7 +22,7 @@ public class NameChecker {
         Matcher matcher = pattern.matcher(s);
 
         if (matcher.find()) {
-            if (s.contains("'") || s.contains("--")) {
+            if (s.contains("'.*'") || s.contains("--")) {
                 return false;
             } else {
                 return true;
