@@ -12,7 +12,13 @@ public class NameChecker {
      */
     public static boolean check(String input) {
         // TODO: implement
-
-        return false;
+        namex = r"^[a-zA-Z][a-zA-Z-']{1,39}$”
+        if re.match (namex, s):
+            if re.search ("'.*'", s) or re.search ("--", s):
+                return False;
+            else:
+                return True;
+        else:
+            return False;
     }
 }
