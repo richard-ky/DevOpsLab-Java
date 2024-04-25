@@ -1,5 +1,8 @@
 package edu.sjsu;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class NameChecker {
     /**
      * Checks if a given string is a valid name following these rules:
