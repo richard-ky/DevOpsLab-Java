@@ -10,15 +10,23 @@ public class NameChecker {
      * @param input Name to check
      * @return True if input is a valid name, else false
      */
-    public static boolean check(String input) {
-        // TODO: implement
-        namex = r"^[a-zA-Z][a-zA-Z-']{1,39}$”
-        if re.match (namex, s):
-            if re.search ("'.*'", s) or re.search ("--", s):
-                return False;
-            else:
-                return True;
-        else:
-            return False;
+    public static boolean nameCheck(String s) {
+        // Checks that a name only includes alphabetic characters, -, or single quote
+        // Names must be between 2 and 40 characters long
+        // Quoted strings and -- are disallowed
+        String namex = "^[a-zA-Z][a-zA-Z-'0-9]{1,39}$";
+        Pattern pattern = Pattern.compile(namex);
+        Matcher matcher = pattern.matcher(s);
+
+        if (matcher.find()) {
+            if (s.contains("'") || s.contains("--")) {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
     }
+
 }
